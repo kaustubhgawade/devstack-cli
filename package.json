@@ -1,0 +1,28 @@
+{
+  "name": "devstack-cli",
+  "version": "1.0.0",
+  "description": "CLI to scaffold production-ready NestJS applications with best practices, linting, swagger, and project automation",
+  "main": "src/index.ts",
+  "repository": "https://github.com/kaustubhgawade/devstack-cli.git",
+  "author": "Kaustubh Gawade <kaustubhgawade2602@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.6.0",
+    "eslint": "^10.2.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-unicorn": "^64.0.0",
+    "globals": "^17.5.0",
+    "prettier": "^3.8.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1"
+  }
+}
