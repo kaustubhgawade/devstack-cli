@@ -7,11 +7,15 @@
   "author": "Kaustubh Gawade <kaustubhgawade2602@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.6.0",
@@ -21,7 +25,7 @@
     "eslint-plugin-unicorn": "^64.0.0",
     "globals": "^17.5.0",
     "prettier": "^3.8.3",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.59.1"
   }
