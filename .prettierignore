@@ -3,4 +3,5 @@ dist
 bin
 .github
 .env
+.env.*
 *.log

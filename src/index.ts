@@ -1,4 +1,4 @@
-function bootstrap() {
-    console.log('Hello, Devstack CLI!');
+function bootstrap(): void {
+  console.info('Hello, Devstack CLI!');
 }
 bootstrap();

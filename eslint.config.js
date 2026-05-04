@@ -8,10 +8,10 @@ import prettier from 'eslint-config-prettier';
 
 export default tseslint.config(
   {
-    ignores: ['dist/', 'node_modules/', '.env', '.env.*', '*.log', 'coverage/', 'build/'],
+    ignores: ['dist/', 'node_modules/', '.env', '.env.*', '*.log'],
   },
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  tseslint.configs.recommended,
   {
     files: ['**/*.ts'],
     languageOptions: {
@@ -27,7 +27,6 @@ export default tseslint.config(
       unicorn: unicorn,
     },
     rules: {
-      // ===== Import Plugin Rules =====
       'import/order': [
         'error',
         {
@@ -37,24 +36,15 @@ export default tseslint.config(
         },
       ],
       'import/no-duplicates': 'error',
-      'import/no-extraneous-dependencies': [
-        'error',
-        {
-          devDependencies: ['**/*.test.ts', '**/*.spec.ts', 'tests/**', 'scripts/**'],
-        },
-      ],
+      'import/no-extraneous-dependencies': 'error',
       'import/no-mutable-exports': 'error',
       'import/no-useless-path-segments': 'warn',
       'import/no-cycle': ['error', { maxDepth: 10 }],
       'import/first': 'error',
       'import/newline-after-import': ['error', { count: 1 }],
-      'import/no-default-export': 'warn',
-      'import/no-unresolved': 'off', // TypeScript handles this
-      'import/extensions': ['error', 'never', { json: 'always' }],
       'import/no-self-import': 'error',
       'import/no-relative-packages': 'error',
 
-      // ===== Unicorn Plugin Rules =====
       ...unicorn.configs.recommended.rules,
       'unicorn/filename-case': ['error', { case: 'kebabCase' }],
       'unicorn/prefer-node-protocol': 'error',
@@ -74,10 +64,10 @@ export default tseslint.config(
           },
         },
       ],
-      'unicorn/no-null': 'off', // null is sometimes needed
-      'unicorn/prefer-top-level-await': 'error',
-      'unicorn/consistent-function-scoping': 'error',
-      'unicorn/no-array-for-each': 'warn',
+      'unicorn/no-null': 'off',
+      'unicorn/prefer-top-level-await': 'off',
+      'unicorn/consistent-function-scoping': 'warn',
+      'unicorn/no-array-for-each': 'error',
       'unicorn/prefer-module': 'error',
       'unicorn/prefer-ternary': 'warn',
 
@@ -121,7 +111,7 @@ export default tseslint.config(
         },
       ],
       '@typescript-eslint/explicit-function-return-type': [
-        'warn',
+        'error',
         {
           allowExpressions: true,
           allowTypedFunctionExpressions: true,
