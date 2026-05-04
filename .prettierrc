@@ -12,5 +12,6 @@
   "arrowParens": "always",
 
   "endOfLine": "lf",
-  "proseWrap": "preserve"
+  "proseWrap": "preserve",
+  "embeddedLanguageFormatting": "auto"
 }
