@@ -3,8 +3,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "prettier.requireConfig": true,
-
-  // Language-specific overrides for Prettier
+  // Language-specific Prettier overrides
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -23,8 +22,13 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
+  // ========== ESLINT INTEGRATION ==========
+  "eslint.validate": ["javascript", "typescript"],
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
   // ========== EDITOR BEHAVIOR ==========
   "editor.tabSize": 2,
-  "files.autoSave": "onFocusChange"
+  "files.autoSave": "afterDelay"
 }
