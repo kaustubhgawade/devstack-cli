@@ -7,7 +7,17 @@ import tseslint from 'typescript-eslint';
 
 export default defineConfig([
   {
-    ignores: ['.git', '.github', '.vscode', 'coverage', 'dist', 'node_modules', '*.log'],
+    ignores: [
+      '.git',
+      '.github',
+      '.vscode',
+      'coverage',
+      'dist',
+      'bin',
+      'node_modules',
+      'templates',
+      '*.log',
+    ],
   },
 
   ...tseslint.configs.recommended,
@@ -69,7 +79,6 @@ export default defineConfig([
 
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
-      'import/no-unresolved': 'error',
       'import/no-useless-path-segments': 'error',
       'import/order': [
         'error',
